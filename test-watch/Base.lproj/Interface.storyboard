@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="8164.2" systemVersion="14E46" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AgC-eL-Hgc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8135.1"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="8083.2"/>
+    </dependencies>
+    <scenes>
+        <!--Interface Controller-->
+        <scene sceneID="aou-V4-d1y">
+            <objects>
+                <controller id="AgC-eL-Hgc" customClass="InterfaceController">
+                    <items>
+                        <table alignment="left" id="Ueb-Y5-CDE">
+                            <items>
+                                <tableRow identifier="CellDefault" id="fT2-SU-SwF" customClass="RowController">
+                                    <group key="rootItem" width="1" height="0.0" alignment="left" layout="vertical" id="VrO-0t-CbL">
+                                        <items>
+                                            <label alignment="left" text="Label" id="kea-UU-nFT" userLabel="Title"/>
+                                            <label width="1" alignment="left" text="Label" numberOfLines="0" id="Uz1-1k-cyv" userLabel="Detail">
+                                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                <fontDescription key="font" style="UICTFontTextStyleFootnote"/>
+                                            </label>
+                                        </items>
+                                    </group>
+                                    <connections>
+                                        <outlet property="detailLabel" destination="Uz1-1k-cyv" id="0M5-kW-GPr"/>
+                                        <outlet property="titleLabel" destination="kea-UU-nFT" id="iCE-d0-GbY"/>
+                                    </connections>
+                                </tableRow>
+                            </items>
+                        </table>
+                    </items>
+                    <connections>
+                        <outlet property="table" destination="Ueb-Y5-CDE" id="BJH-6x-qc1"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="235" y="263"/>
+        </scene>
+        <!--Properties-->
+        <scene sceneID="8Lz-HZ-Eh4">
+            <objects>
+                <controller identifier="AnimatedProperties" title="Properties" hidesWhenLoading="NO" id="Afm-PG-sQg" customClass="AnimatedPropertiesInterfaceController">
+                    <items>
+                        <imageView height="96" alignment="center" image="m3" id="thH-qN-whQ" userLabel="image"/>
+                        <group width="1" alignment="center" verticalAlignment="bottom" id="3u6-n3-rEy">
+                            <items>
+                                <button width="0.33000000000000002" alignment="left" title="scale" id="Zpv-io-1Su">
+                                    <fontDescription key="font" type="system" pointSize="11"/>
+                                    <connections>
+                                        <action selector="scaleActionButton:" destination="Afm-PG-sQg" id="fvS-5P-FDn"/>
+                                    </connections>
+                                </button>
+                                <button width="0.33000000000000002" alignment="left" title="fade" id="Ak2-kE-H2V">
+                                    <fontDescription key="font" type="system" pointSize="11"/>
+                                    <connections>
+                                        <action selector="fadeActionButton:" destination="Afm-PG-sQg" id="CYD-LF-1cN"/>
+                                    </connections>
+                                </button>
+                                <button width="0.33000000000000002" alignment="left" title="move" id="yr7-HD-I5T">
+                                    <fontDescription key="font" type="system" pointSize="11"/>
+                                    <connections>
+                                        <action selector="moveActionButton:" destination="Afm-PG-sQg" id="pNh-6r-Ciw"/>
+                                    </connections>
+                                </button>
+                            </items>
+                        </group>
+                    </items>
+                    <connections>
+                        <outlet property="image" destination="thH-qN-whQ" id="XyL-Nq-qYC"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="443" y="263"/>
+        </scene>
+        <!--Alerts-->
+        <scene sceneID="y6s-bd-LiC">
+            <objects>
+                <controller identifier="Alert" title="Alerts" hidesWhenLoading="NO" id="eQk-dK-3Cd" customClass="AlertInterfaceController">
+                    <items>
+                        <group width="1" alignment="left" layout="vertical" id="kLq-B7-2tn">
+                            <items>
+                                <button width="1" alignment="left" title="Simple" id="Csx-DJ-yPB">
+                                    <connections>
+                                        <action selector="showSimpleAlertActionButton:" destination="eQk-dK-3Cd" id="Foi-33-mLg"/>
+                                    </connections>
+                                </button>
+                                <button width="1" alignment="left" title="Side By Side" id="fL9-iF-q93">
+                                    <connections>
+                                        <action selector="showSideBySideAlertActionButton:" destination="eQk-dK-3Cd" id="o38-2o-22T"/>
+                                    </connections>
+                                </button>
+                                <button width="1" alignment="left" title="Action Sheet" id="FsG-RV-Bfi">
+                                    <connections>
+                                        <action selector="showActionSheetActionButton:" destination="eQk-dK-3Cd" id="6zt-iL-166"/>
+                                    </connections>
+                                </button>
+                            </items>
+                        </group>
+                    </items>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="789" y="263"/>
+        </scene>
+        <!--Animation-->
+        <scene sceneID="yTh-bj-Npr">
+            <objects>
+                <controller identifier="Animation" title="Animation" hidesWhenLoading="NO" id="Pf8-D7-6Xg" customClass="AnimationInterfaceController">
+                    <items>
+                        <group width="120" height="120" alignment="center" verticalAlignment="center" backgroundImage="progress-0" id="APz-Gc-VCt">
+                            <items>
+                                <picker width="80" height="80" alignment="center" verticalAlignment="center" id="kS3-X1-4uE"/>
+                            </items>
+                        </group>
+                    </items>
+                    <connections>
+                        <outlet property="pickerControl" destination="kS3-X1-4uE" id="byY-ee-zvc"/>
+                        <outlet property="progressGroup" destination="APz-Gc-VCt" id="Q4c-xc-sxo"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="610" y="263"/>
+        </scene>
+        <!--Externals-->
+        <scene sceneID="pVA-bP-aYf">
+            <objects>
+                <controller identifier="ExternalURL" title="Externals" hidesWhenLoading="NO" id="HVr-Fw-zRO" customClass="ExternalUrlInterfaceController">
+                    <items>
+                        <group width="1" alignment="left" layout="vertical" id="ZQ0-kc-4Xf">
+                            <items>
+                                <button width="1" alignment="left" title="Telephone" id="Mne-Wj-Vjq">
+                                    <connections>
+                                        <action selector="openTelephoneActionButton:" destination="HVr-Fw-zRO" id="eQ1-OL-RHJ"/>
+                                    </connections>
+                                </button>
+                                <button width="1" alignment="left" title="Text" id="zhF-Np-Kgo">
+                                    <connections>
+                                        <action selector="openTextActionButton:" destination="HVr-Fw-zRO" id="AaO-9E-K1H"/>
+                                    </connections>
+                                </button>
+                            </items>
+                        </group>
+                    </items>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="789" y="486"/>
+        </scene>
+        <!--Messaging-->
+        <scene sceneID="lFR-ix-Q2K">
+            <objects>
+                <controller identifier="Message" title="Messaging" hidesWhenLoading="NO" id="oOg-RQ-mwq" customClass="MessageToPhoneInterfaceController">
+                    <items>
+                        <button width="1" alignment="left" title="Send" id="ibC-fT-61X">
+                            <connections>
+                                <action selector="sendActionButton" destination="oOg-RQ-mwq" id="IU4-ft-RH2"/>
+                            </connections>
+                        </button>
+                        <label width="1" alignment="left" text="Launch parent app and tap the &quot;send&quot; button when try to receive message from phone." numberOfLines="0" id="ASg-ML-zYK">
+                            <fontDescription key="font" style="UICTFontTextStyleFootnote"/>
+                        </label>
+                    </items>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="443" y="486"/>
+        </scene>
+        <!--Network-->
+        <scene sceneID="txW-Pb-fLU">
+            <objects>
+                <controller identifier="Network" title="Network" hidesWhenLoading="NO" id="wuW-du-4Qm" customClass="NetworkInterfaceController">
+                    <items>
+                        <group alignment="center" id="xpZ-dq-M7b">
+                            <items>
+                                <imageView width="100" height="100" alignment="center" verticalAlignment="center" id="Xia-dI-nev"/>
+                            </items>
+                        </group>
+                        <button width="1" alignment="center" verticalAlignment="bottom" title="Get image from remote" id="bMU-XU-CcH" userLabel="GetImage Button">
+                            <connections>
+                                <action selector="getImageActionButton:" destination="wuW-du-4Qm" id="Kdc-Xo-Sdb"/>
+                            </connections>
+                        </button>
+                    </items>
+                    <connections>
+                        <outlet property="image" destination="Xia-dI-nev" id="uVW-iF-mq6"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="610" y="486"/>
+        </scene>
+        <!--Glance Interface Controller-->
+        <scene sceneID="BOz-TT-tkC">
+            <objects>
+                <glanceController spacing="0.0" id="0uZ-2p-rRc" customClass="GlanceController">
+                    <items>
+                        <group alignment="left" id="t8f-Gd-c4y"/>
+                        <group alignment="left" id="uCw-4Q-Ouw"/>
+                    </items>
+                    <edgeInsets key="margins" left="0.0" right="0.0" top="0.0" bottom="14"/>
+                </glanceController>
+            </objects>
+            <point key="canvasLocation" x="235" y="672"/>
+        </scene>
+        <!--Static Notification Interface Controller-->
+        <scene sceneID="AEw-b0-oYE">
+            <objects>
+                <notificationController id="YCC-NB-fut">
+                    <items>
+                        <label alignment="left" text="Alert Label" id="XkS-y5-khE"/>
+                    </items>
+                    <notificationCategory key="notificationCategory" identifier="myCategory" id="JfB-70-Muf"/>
+                    <connections>
+                        <outlet property="notificationAlertLabel" destination="XkS-y5-khE" id="49B-RR-99y"/>
+                        <segue destination="gdX-wl-uQE" kind="relationship" relationship="dynamicNotificationInterface" id="fKh-qV-3T2"/>
+                    </connections>
+                </notificationController>
+            </objects>
+            <point key="canvasLocation" x="235" y="1001"/>
+        </scene>
+        <!--Notification Controller-->
+        <scene sceneID="KIl-fV-djm">
+            <objects>
+                <controller id="gdX-wl-uQE" customClass="NotificationController"/>
+            </objects>
+            <point key="canvasLocation" x="553" y="1001"/>
+        </scene>
+    </scenes>
+</document>
